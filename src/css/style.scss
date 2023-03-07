@@ -1,0 +1,57 @@
+@use 'variables';
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: variables.$light-gray;
+}
+
+.qr-code {
+  font-family: variables.$outfit;
+  text-align: center;
+
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+
+    padding: 0.75rem;
+    max-width: 360px;
+
+    border-radius: 0.5rem;
+    
+    background-color: variables.$white;
+  }
+
+  @media screen and (min-width: 1440px) {
+    &__container {
+      max-width: 400px;
+    }
+  }
+
+  &__code {
+    margin-top: 0.5rem;
+
+    border-radius: 0.5rem;
+
+    max-width: 95%;
+  }
+
+  &__heading {
+    color: variables.$dark-blue;
+
+    font-size: 1.5rem;
+  }
+
+  &__description {
+    color: variables.$grayish-blue;
+  
+    font-size: 1.2rem;
+  }
+}
